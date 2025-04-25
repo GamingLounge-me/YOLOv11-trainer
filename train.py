@@ -6,6 +6,14 @@ from PIL import Image
 import shutil
 import random
 
+#
+# CONFIG
+#
+
+model = YOLO('models/yolo11n.pt')
+
+########
+
 def rmDatasets():
     # Remove the datasets folder if it exists
     datasets_dir = "datasets"
@@ -149,9 +157,6 @@ def processInput():
     print("datasets shuffled and split into train, val, and test folders!")
 
 processInput()
-
-# Load a pretrained YOLOv11 model
-model = YOLO('models/yolo11n.pt')
 
 # Train the model
 model.train(
