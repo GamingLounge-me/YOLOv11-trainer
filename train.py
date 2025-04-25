@@ -11,6 +11,7 @@ import random
 #
 
 model = YOLO('models/yolo11n.pt')
+run_name = "CHANGE_ME"
 
 ########
 
@@ -166,7 +167,7 @@ model.train(
     device='cpu',               # GPU device (use 'cpu' for CPU training)
     workers=8,              # Number of data loader workers
     project='runs/train',   # Directory to save training results
-    name='first_try',       # Name of the training run
+    name=run_name,       # Name of the training run
     data='datasets/data.yml'         # Path to your datasets configuration file
 )
 
