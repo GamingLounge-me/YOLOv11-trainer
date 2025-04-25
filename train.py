@@ -151,7 +151,7 @@ def processInput():
 processInput()
 
 # Load a pretrained YOLOv11 model
-model = YOLO('yolo11s.pt')
+model = YOLO('models/yolo11n.pt')
 
 # Train the model
 model.train(
@@ -162,7 +162,7 @@ model.train(
     workers=8,              # Number of data loader workers
     project='runs/train',   # Directory to save training results
     name='first_try',       # Name of the training run
-    data='data.yml'         # Path to your datasets configuration file
+    data='datasets/data.yml'         # Path to your datasets configuration file
 )
 
 rmDatasets()
