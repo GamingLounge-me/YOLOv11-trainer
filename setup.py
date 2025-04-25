@@ -12,4 +12,7 @@ os.makedirs(images_dir, exist_ok=True)
 with open(tags_file, "w") as f:
     pass
 
+# create model directory
+os.makedirs("models", exist_ok=True)
+
 print(f"Input folder structure created with an empty {tags_file} and subfolder {images_dir}.")
